@@ -50,6 +50,7 @@ mkdir build && cd build && cmake -DCMAKE_INSTALL_PREFIX=installed -DCMAKE_BUILD_
 cd ..
 cmake --build build --config Release --target install
 ```
+The output is now in `~/develop/geodesic/build/installed`.
 
 ## Compiling your client project (an example in a custom directory in this case)
 
