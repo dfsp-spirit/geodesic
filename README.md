@@ -56,6 +56,7 @@ The output is now in `~/develop/geodesic/build/installed`.
 
 ```
 mkdir ~/my_project_using_geodesic/
+cd ~/my_project_using_geodesic/
 cp ~/develop/geodesic/examples/* .
 g++ -I ../geodesic/include/ example0.cpp
 ```
