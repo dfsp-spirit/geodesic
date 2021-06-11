@@ -37,3 +37,26 @@ There is a list of possible features and improvements that could be done to the 
 [1] J.S.B. Mitchell, D.~M. Mount, and C.~H. Papadimitriou. SIAM J. Comput., 16:647--668, 1987. 
 [2] J. O'Rourke, Computational Geometry Column 35, SIGACT News, 30(2) Issue #111 (1999) 31-32, 1993 (could be found at citeseer.ist.psu.edu)
 
+** Compiling the library (derived from travis file) **
+
+```
+mkdir ~/develop
+cd ~/develop/
+git clone https://github.com/mojocorp/geodesic.git
+cd geodesic
+mkdir build && cd build && cmake -DCMAKE_INSTALL_PREFIX=installed -DCMAKE_BUILD_TYPE=Release ..
+cd ..
+cmake --build build --config Release --target install
+```
+
+** Compiling your client project (an example in a custom directory in this case) **
+
+```
+mkdir ~/my_project_using_geodesic/
+cp ~/develop/geodesic/examples/* .
+g++ -I ../geodesic/include/ example0.cpp
+```
+Run it:
+```
+./a.out hedgehog_mesh.txt 30 50
+```
